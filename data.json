@@ -1,0 +1,31 @@
+{
+    "egresos_mensuales": {
+        "enero": 10900,
+        "febrero": 13400,
+        "marzo": 10900,
+        "abril": 14400,
+        "mayo": 8900,
+        "junio": 9400,
+        "julio": 9800,
+        "agosto": 10400,
+        "septiembre": 8000,
+        "octubre": 9900,
+        "noviembre": 13200,
+        "diciembre": 18700
+    },
+    "ingresos_mensuales": {
+        "enero": 20000,
+        "febrero": 20000,
+        "marzo": 20000,
+        "abril": 20000,
+        "mayo": 20000,
+        "junio": 20000,
+        "julio": 20000,
+        "agosto": 20000,
+        "septiembre": 20000,
+        "octubre": 20000,
+        "noviembre": 20000,
+        "diciembre": 20000
+    },
+    "anio": 2023
+}

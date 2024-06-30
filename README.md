@@ -38,9 +38,9 @@ Aplicamos estos comandos en la terminal, ruta donde esta nuestro proyecto.
 ```
 
 
-**EXTRA: si no quieres intalar las librerias requeridas puedes solo intalar flask y las librerías openia y langChain:**:
+**EXTRA: si no quieres intalar las librerias requeridas puedes solo intalar flask y las librerías de Gemini:**:
 ```bash
-  pip install Flask openia langchain
+  pip install Flask google-generativeai
 ```
 
 
@@ -55,7 +55,7 @@ Nota: si se cierra vsCode, tendremos que activar el ambiente virtual, descrito e
 Para Windows se cambia export por 
 ```shell
   $env:FLASK_APP = "index.py"
-  $env: OPENAI_API_KEY=sk-###########
+  $env:GEMINI_API_KEY="##############################"
   flask run
 ```
 
@@ -63,7 +63,7 @@ Para Windows se cambia export por
 Con terminal de GIT
 ```shell
   export FLASK_APP=index.py 
-  export OPENAI_API_KEY=sk-###########
+  export GEMINI_API_KEY="##############################"
   flask run
 ```
 

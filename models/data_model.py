@@ -62,10 +62,10 @@ class DataModel:
         cursor.execute(
             f"SELECT * FROM data where id_tipo = {id_tipo}")
         results = cursor.fetchall()
-        
+
         cursor.close()
         connection.close()
-        
+
         return results
 
     def existe_registro(self, id_tipo, id_anio, mes):

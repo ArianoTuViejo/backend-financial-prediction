@@ -24,16 +24,19 @@ class PredictionModel:  # Clase PredictionModel
         dataModel = DataModel()  # Instanciamos el modelo DataModel
 
         # Obtenemos los datos de la tabla
-        data_consulta = dataModel.obtener_datos_tabla(
-            datarequest['tipo_dato'], datarequest['tipo_anio'])
+        # data_consulta = dataModel.obtener_datos_tabla(
+        #     datarequest['tipo_dato'], datarequest['tipo_anio'])
+
+        data_consulta = dataModel.obtener_data_por_tipo(
+            datarequest['id_tipo'])
 
         # Obtenemos el nombre del tipo
         tipo_data_nombre = dataModel.obtener_nombre_tipo(
-            datarequest['tipo_dato'])[0]['tipo']
+            datarequest['id_tipo'])[0]['tipo']
 
-        # Obtenemos el nombre del anio
-        tipo_anio_nombre = dataModel.obtener_nombre_anio(
-            datarequest['tipo_anio'])[0]['anio']
+        # # Obtenemos el nombre del anio
+        # tipo_anio_nombre = dataModel.obtener_nombre_anio(
+        #     datarequest['tipo_anio'])[0]['anio']
 
         # Obtenemos los totales
         array_totales = []
@@ -46,7 +49,7 @@ class PredictionModel:  # Clase PredictionModel
         # consult = ("De acuerdo a este arreglo de meses ", str(meses)," tenemos que los ", str(tipo_data_nombre), " una empresa en el año ", str(tipo_anio_nombre), "son estos ",
         # str(array_totales), "devuelve una prediccion con regresión lineal de estos datos de los", str(tipo_data_nombre),"del siguiente mes")
 
-        consult = (f"Predice el total de {str(tipo_data_nombre)} para el siguiente mes basado en los datos de ingresos del año {tipo_anio_nombre}: {
+        consult = (f"Predice el total de {str(tipo_data_nombre)} para el siguiente mes basado en los datos de {str(tipo_data_nombre)} de los años 2023 y 2024: {
                    array_totales}", "Solo necesito que me devuelvas el ingreso total predicho para el siguiente mes, no necesito que me pases más texto, solo el dato final")
 
         # Imprimimos la consulta
